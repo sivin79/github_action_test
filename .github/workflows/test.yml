@@ -10,31 +10,7 @@ jobs:
     outputs:
       branch: ${{ steps.extract_branch.outputs.branch }}
     steps:
-      - uses: actions/checkout@v2
       - name: Extract branch name
-    shell: bash
-    run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
-# jobs:
-#   my-testing:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Print Hello message
-#         run: echo "Hello, world!!!!"
-
-#       - name: Show folders
-#         run: ls -l
-
-#       - name: Show terraform version
-#         run: terraform --version
-
-#       - name: Show SHA
-#         run: echo "app-ver = ${{ env.APP_TAG }}"
-
-#   my-deploy:
-#     runs-on: ubuntu-latest
-#     needs: [my-testing]
-
-#     steps:
-#       - name: Print Deploy
-#         run: echo "Hello, world from Deploy!!!"
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
