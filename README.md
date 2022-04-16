@@ -8,3 +8,6 @@
 
 
 ![Build Status](https://github.com/sivin79/github_action_test/workflows/My-GitHub-test/badge.svg)](https://github.com/sivin79/github_action_test/actions/workflows/test.yml)
+
+
+![Build Status](https://github.com/sivin79/github_action_test/workflows/My-GitHub-test/badge.svg)
