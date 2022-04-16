@@ -28,7 +28,7 @@ resource "aws_vpc" "test-vpc" {
   instance_tenancy     = "default"
 
   tags = {
-    Name = "test-vpc"
+    Name = "TEST-VPC"
   }
 
 }
@@ -78,7 +78,7 @@ resource "aws_security_group" "allow_ports_22_80" {
   }]
 
   tags = {
-    Name = "Test SG CI-CD"
+    Name = "TEST SG CI-CD"
   }
 
 }
