@@ -97,5 +97,5 @@ data "aws_availability_zones" "available" {
 }
 
 output "aws_availability_zones_availabale" {
-  value = [aws_availability_zones.available.id]
+  value = data.aws_availability_zones.available.names[*]
 }
