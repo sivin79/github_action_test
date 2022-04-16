@@ -22,34 +22,11 @@ jobs:
     steps:
       - name: deploy-dev
     uses: actions/download-artifact@v2
-    with:
+    
       name: app-build
-      path: dist
       - run: echo "Hello, world from deploy-dev!!!!"
 
-  deploy-staging:
-    needs: build
-    runs-on: ubuntu-latest
-    if: ${{ needs.build.outputs.branch == 'staging' }}
-    steps:
-      - name: deploy-staging
-    uses: actions/download-artifact@v2
-    with:
-      name: app-build
-      path: dist
-      - run: echo "Hello, world from deploy-staging!!!!"
-
-  deploy-prod:
-    needs: build
-    runs-on: ubuntu-latest
-    if: ${{ needs.build.outputs.branch == 'prod' }}
-    steps:
-      - name: deploy-prods
-    uses: actions/download-artifact@v2
-    with:
-      name: app-build
-      path: dist
-      - run: echo "Hello, world from deploy-staging!!!!"
+ 
 # jobs:
 #   my-testing:
 #     runs-on: ubuntu-latest
