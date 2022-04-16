@@ -82,3 +82,12 @@ resource "aws_security_group" "allow_ports_22_80" {
   }
 
 }
+
+
+output "my_sg_id" {
+  value = aws_security_group.allow_ports_22_80.id
+}
+
+output "my_vpc_id" {
+  value = aws_vpc.test-vpc.id
+}
