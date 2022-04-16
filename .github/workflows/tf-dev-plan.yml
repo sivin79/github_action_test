@@ -1,9 +1,9 @@
 name: TF-plan-DEV
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - dev
     paths:
       - terraform/**
 
