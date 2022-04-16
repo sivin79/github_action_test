@@ -50,7 +50,7 @@ jobs:
         run: terraform plan -no-color -out plan.out
         working-directory: ${{ env.WORKING_DIRECTORY }}
 
-      - name: "Terraform destroy"
-        id: destroy
-        run: terraform destroy -auto-approve plan.out
+      - name: "Terraform apply"
+        id: apply
+        run: terraform apply -auto-approve plan.out
         working-directory: ${{ env.WORKING_DIRECTORY }}
