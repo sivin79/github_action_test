@@ -67,7 +67,7 @@ resource "aws_security_group" "allow_ports_22_80" {
   }]
 
   tags = {
-    Name = "Test SG CI-CD+++"
+    Name = "Test SG CI-CD"
   }
 
 }
