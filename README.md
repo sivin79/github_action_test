@@ -6,4 +6,4 @@
 
 [![Actions Status](https://github.com/sivin79/github_action_test/workflows/TF-apply-DEV/badge.svg)](https://github.com/sivin79/github_action_test/actions)
 
-[![Actions Status](https://github.com/sivin79/github_action_test/actions/workflows/tf-dev-apply.yml/badge.svg)](https://github.com/sivin79/github_action_test/actions/workflows/tf-dev-apply.yml)
+[![Actions Status](https://github.com/sivin79/github_action_test/actions/workflows/TF-apply-DEV/badge.svg)](https://github.com/sivin79/github_action_test/actions/workflows/tf-dev-apply.yml)
