@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Print Hello message
-        run: echo "Hello, world!"
+        run: echo "Hello, world!!!!"
 
       - name: Show folders
         run: ls -l
@@ -33,4 +33,4 @@ jobs:
 
     steps:
       - name: Print Deploy
-        run: echo "Hello, world from Deploy!"
+        run: echo "Hello, world from Deploy!!!"
