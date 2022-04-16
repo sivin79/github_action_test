@@ -91,3 +91,11 @@ output "my_sg_id" {
 output "my_vpc_id" {
   value = aws_vpc.test-vpc.id
 }
+
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
+output "aws_availability_zones_availabale" {
+  value = [aws_availability_zones.available.id]
+}
