@@ -1,6 +1,6 @@
-# jobs:
-#   my-testing:
-#     runs-on: ubuntu-latest
+ jobs:
+   my-testing:
+     runs-on: ubuntu-latest
 
 #     steps:
 #       - name: Print Hello message
