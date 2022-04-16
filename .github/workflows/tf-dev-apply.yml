@@ -51,6 +51,6 @@ jobs:
         working-directory: ${{ env.WORKING_DIRECTORY }}
 
       - name: "Terraform destroy"
-        id: apply
+        id: destroy
         run: terraform destroy -auto-approve plan.out
         working-directory: ${{ env.WORKING_DIRECTORY }}
