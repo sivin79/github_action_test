@@ -2,13 +2,7 @@ name: My-GitHub-test
 
 on:
   push:
-    branches:
-      - main
-
-env:
-  AWS_ACCESS_KEY: ${{secrets.AWS_ACCESS_KEY_ID}}
-  AWS_SECRET_KEY: ${{secrets.AWS_SECRET_KEY_ID}}
-  APP_TAG: "app-version-${{ github.sha }}"
+    branches: [dev, staging, prod]
 
 jobs:
   build:
@@ -20,7 +14,30 @@ jobs:
       - name: Extract branch name
     shell: bash
     run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
-    id: extract_branch
+
+  deploy-dev:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ needs.build.outputs.branch == 'dev' }}
+    steps:
+      - name: deploy-dev
+      - run: echo "Hello, world from deploy-dev!!!!"
+
+  deploy-staging:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ needs.build.outputs.branch == 'staging' }}
+    steps:
+      - name: deploy-staging
+      - run: echo "Hello, world from deploy-staging!!!!"
+
+  deploy-prod:
+    needs: build
+    runs-on: ubuntu-latest
+    if: ${{ needs.build.outputs.branch == 'prod' }}
+    steps:
+      - name: deploy-prods
+      - run: echo "Hello, world from deploy-staging!!!!"
 # jobs:
 #   my-testing:
 #     runs-on: ubuntu-latest
