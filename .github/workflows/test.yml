@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      -name: Print Hello message
+      - name: Print Hello message
         run: echo "Hello, world!!!!"
 
       - name: Show folders
