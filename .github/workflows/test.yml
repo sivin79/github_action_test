@@ -2,7 +2,7 @@ name: My-GitHub-test
 
 on:
   push:
-    branches: [dev, staging, prod]
+    branches: [dev, staging, prod, main]
 
 jobs:
   build:
