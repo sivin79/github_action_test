@@ -12,10 +12,10 @@ env:
 
 jobs:
   my-testing:
-    runs-on: ubuntu-latest-111
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello message
+      -name: Print Hello message
         run: echo "Hello, world!!!!"
 
       - name: Show folders
