@@ -3,3 +3,5 @@
 
 
 [![My-GitHub-test](https://github.com/sivin79/github_action_test/actions/workflows/test.yml/badge.svg)](https://github.com/sivin79/github_action_test/actions/workflows/test.yml)
+
+[![My-GitHub-test](https://github.com/sivin79/github_action_test/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/sivin79/github_action_test/actions/workflows/test.yml)
