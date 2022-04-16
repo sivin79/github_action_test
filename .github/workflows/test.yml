@@ -14,19 +14,6 @@ jobs:
       - name: Extract branch name
     shell: bash
     run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/})"
-
-  deploy-dev:
-    needs: build
-    runs-on: ubuntu-latest
-    if: ${{ needs.build.outputs.branch == 'dev' }}
-    steps:
-      - name: deploy-dev
-    uses: actions/download-artifact@v2
-    
-      name: app-build
-      - run: echo "Hello, world from deploy-dev!!!!"
-
- 
 # jobs:
 #   my-testing:
 #     runs-on: ubuntu-latest
