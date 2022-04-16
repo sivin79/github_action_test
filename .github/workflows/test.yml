@@ -33,4 +33,4 @@ jobs:
 
     steps:
       - name: Print Deploy
-        run: echo "Hello, world from DEploy!"
+        run: echo "Hello, world from Deploy!"
