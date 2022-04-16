@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - terraform/**
 
 env:
   AWS_ACCESS_KEY: ${{secrets.AWS_ACCESS_KEY_ID}}
